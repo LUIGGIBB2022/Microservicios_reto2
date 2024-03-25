@@ -6,7 +6,12 @@
   * El motor de la base de datos es MARIADB
   * La aplicación cuenta con siguientes servicios:
     * Creación y modificación de información de usuarios (User)
+    * Los endpoint para usuarios son:
+      * http://localhost:9090/user/create (crear usuarios)
+      * http://localhost;9090/user/update/{id} (actualizar usuarios)
     * Creación y modificación de información de cuentas (Account)
+      * http://localhost:9090/account/create (crear cuentas)
+      * http://localhost;9090/account/update/{id} (actualizar cuentas)
   * La rama donde está alojada es la MASTER
   * 
     
