@@ -19,7 +19,7 @@ public class UserController {
     public void  createUser(@RequestBody User user) {userService.createUser(user);}
 
 
-    @PutMapping("{id}")
+    @PutMapping("/user/update/{id}")
     public ResponseEntity<User> updateUser(@PathVariable("id") Long userId, @RequestBody User user)
     {
         //userService.updateUser(user,userId);
