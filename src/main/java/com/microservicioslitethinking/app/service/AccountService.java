@@ -20,6 +20,7 @@ public class AccountService {
         // Obtener el Cuenta existente
         Account existingAccount = accountRepo.findById(accountId).get();
         // Realizar las  tareas de actualización del registro
+        existingAccount.setPin(accountUpdate.getPin());
         existingAccount.setBalance(accountUpdate.getBalance());
         existingAccount.setAssociated_card(accountUpdate.getAssociated_card());
         return accountRepo.save(existingAccount);
