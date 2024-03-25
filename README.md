@@ -6,6 +6,7 @@
   * La aplicación cuenta con siguientes servicios:
     * Creación y modificación de información de usuarios (User)
     * Creación y modificación de información de cuentas (Account)
+  * La rama donde está alojada es la MASTER
     
 
 ## Nota: Este desarrollo no lo pude adaptar para docker
