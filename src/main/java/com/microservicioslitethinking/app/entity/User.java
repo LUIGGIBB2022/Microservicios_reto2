@@ -1,6 +1,7 @@
 package com.microservicioslitethinking.app.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,8 +18,9 @@ public class User {
     @Basic
     private String name;
     private String password;
+    @Size(max=20)
     private String identification;
+    @Size(max=10)
     private String type;
-    private String pin;
 
 }

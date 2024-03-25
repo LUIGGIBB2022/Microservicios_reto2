@@ -23,7 +23,7 @@ public class UserService {
                 // Realizar las  tareas de actualización del registro
                 existingUser.setName(userUpdate.getName());
                 existingUser.setPassword(userUpdate.getPassword());
-                existingUser.setPin(userUpdate.getPin());
+                //existingUser.setPin(userUpdate.getPin());
                 return userRepo.save(existingUser);
             }
         else
