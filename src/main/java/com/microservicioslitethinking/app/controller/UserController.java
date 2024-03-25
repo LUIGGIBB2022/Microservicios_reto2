@@ -3,10 +3,9 @@ package com.microservicioslitethinking.app.controller;
 import com.microservicioslitethinking.app.entity.User;
 import com.microservicioslitethinking.app.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 //@RequestMapping("/create")
@@ -20,8 +19,16 @@ public class UserController {
     public void  createUser(@RequestBody User user) {userService.createUser(user);}
 
 
-    @PostMapping("/user/update/{userId}")
-    public void  updateUser(@RequestBody User user, Long userId) {userService.updateUser(user,userId);}
+    @PutMapping("{id}")
+    public ResponseEntity<User> updateUser(@PathVariable("id") Long userId, @RequestBody User user)
+    {
+        //userService.updateUser(user,userId);
+        user.setId(userId);
+        User updatedUser = userService.updateUser(userId , user);
+        return new ResponseEntity<>(updatedUser, HttpStatus.OK);
+    }
+
+
 
 
 

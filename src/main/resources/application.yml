@@ -9,7 +9,7 @@ spring:
         - id: ROUTE-USER
           uri: http://localhost:9090
           predicates:
-            - Path=/user/create/** , /user/update/{id}
+            - Path=/user/create/**, /user/update/{userId}
         - id: ROUT-ACCOUNT
           uri: http://localhost:9090
           predicates:

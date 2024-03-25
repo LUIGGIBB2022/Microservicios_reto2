@@ -15,7 +15,7 @@ public class UserService {
 
     public void createUser (User user) { userRepo.save(user);}
 
-    public User updateUser (User userUpdate, Long userId) {
+    public User updateUser (Long userId, User userUpdate) {
         if (userRepo.existsById(userId))
             {
                 // Obtener el usuario existente
